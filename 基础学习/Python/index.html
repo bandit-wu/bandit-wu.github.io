@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python | Bandit</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.50f068c2.css" as="style"><link rel="preload" href="/assets/js/app.7f8aab39.js" as="script"><link rel="preload" href="/assets/js/2.994b757b.js" as="script"><link rel="preload" href="/assets/js/9.d2637751.js" as="script"><link rel="prefetch" href="/assets/js/10.f077f8a9.js"><link rel="prefetch" href="/assets/js/11.7db975b8.js"><link rel="prefetch" href="/assets/js/12.d1d1e470.js"><link rel="prefetch" href="/assets/js/13.6af16a69.js"><link rel="prefetch" href="/assets/js/14.f8eba0bd.js"><link rel="prefetch" href="/assets/js/15.289e3b55.js"><link rel="prefetch" href="/assets/js/16.b7fda363.js"><link rel="prefetch" href="/assets/js/17.646830d9.js"><link rel="prefetch" href="/assets/js/18.c1093c8c.js"><link rel="prefetch" href="/assets/js/19.0d36ffc5.js"><link rel="prefetch" href="/assets/js/20.ffca59e6.js"><link rel="prefetch" href="/assets/js/3.d0e65f2a.js"><link rel="prefetch" href="/assets/js/4.133784c1.js"><link rel="prefetch" href="/assets/js/5.51618976.js"><link rel="prefetch" href="/assets/js/6.88d03338.js"><link rel="prefetch" href="/assets/js/7.9de3ff65.js"><link rel="prefetch" href="/assets/js/8.e66b4a15.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.50f068c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Bandit</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="home" class="dropdown-title"><span class="title">基础学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="home" class="mobile-dropdown-title"><span class="title">基础学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/基础学习/html/" class="nav-link">
+  html
+</a></li><li class="dropdown-subitem"><a href="/基础学习/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-subitem"><a href="/基础学习/js/" class="nav-link">
+  js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/基础学习/php/" class="nav-link">
+  php
+</a></li><li class="dropdown-subitem"><a href="/基础学习/java/" class="nav-link">
+  java
+</a></li><li class="dropdown-subitem"><a href="/基础学习/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-subitem"><a href="/基础学习/C语言/" class="nav-link">
+  C语言
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tool Menu" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="tool Menu" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/工具软件/pnpm/" class="nav-link">
+  pnpm
+</a></li><li class="dropdown-item"><!----> <a href="/工具软件/yarn/" class="nav-link">
+  yarn
+</a></li><li class="dropdown-item"><!----> <a href="/工具软件/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/工具软件/命令行常用命令/" class="nav-link">
+  命令行常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架文档" class="dropdown-title"><span class="title">框架文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架文档" class="mobile-dropdown-title"><span class="title">框架文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/框架文档/vue/" class="nav-link">
+  vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/框架文档/koa2/" class="nav-link">
+  koa2
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/bandit-wu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="home" class="dropdown-title"><span class="title">基础学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="home" class="mobile-dropdown-title"><span class="title">基础学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/基础学习/html/" class="nav-link">
+  html
+</a></li><li class="dropdown-subitem"><a href="/基础学习/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-subitem"><a href="/基础学习/js/" class="nav-link">
+  js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/基础学习/php/" class="nav-link">
+  php
+</a></li><li class="dropdown-subitem"><a href="/基础学习/java/" class="nav-link">
+  java
+</a></li><li class="dropdown-subitem"><a href="/基础学习/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-subitem"><a href="/基础学习/C语言/" class="nav-link">
+  C语言
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tool Menu" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="tool Menu" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/工具软件/pnpm/" class="nav-link">
+  pnpm
+</a></li><li class="dropdown-item"><!----> <a href="/工具软件/yarn/" class="nav-link">
+  yarn
+</a></li><li class="dropdown-item"><!----> <a href="/工具软件/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/工具软件/命令行常用命令/" class="nav-link">
+  命令行常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架文档" class="dropdown-title"><span class="title">框架文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架文档" class="mobile-dropdown-title"><span class="title">框架文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/框架文档/vue/" class="nav-link">
+  vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/框架文档/koa2/" class="nav-link">
+  koa2
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/bandit-wu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Python</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#python特点" class="sidebar-link">python特点</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#python应用范围" class="sidebar-link">python应用范围</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#程序输出" class="sidebar-link">程序输出</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#操作系统和程序" class="sidebar-link">操作系统和程序</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#打印输出" class="sidebar-link">打印输出</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#注释" class="sidebar-link">注释</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#单行注释" class="sidebar-link">单行注释</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#多行注释" class="sidebar-link">多行注释</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#运算符" class="sidebar-link">运算符</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#加减乘除基本运算" class="sidebar-link">加减乘除基本运算</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#混合运算" class="sidebar-link">混合运算</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#特殊运算符" class="sidebar-link">特殊运算符</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#变量" class="sidebar-link">变量</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#变量的定义" class="sidebar-link">变量的定义</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#变量的命名规则" class="sidebar-link">变量的命名规则</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#变量命名规范" class="sidebar-link">变量命名规范</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#常见的数据类型" class="sidebar-link">常见的数据类型</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#一些案例" class="sidebar-link">一些案例</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#列表定义" class="sidebar-link">列表定义</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#列表长度" class="sidebar-link">列表长度</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#访问元素" class="sidebar-link">访问元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#增加元素" class="sidebar-link">增加元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#删除元素" class="sidebar-link">删除元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#修改元素" class="sidebar-link">修改元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#索引" class="sidebar-link">索引</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#反转" class="sidebar-link">反转</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#排序" class="sidebar-link">排序</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#元组" class="sidebar-link">元组</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#定义注意" class="sidebar-link">定义注意</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#组包解包交换" class="sidebar-link">组包解包交换</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#类比列表" class="sidebar-link">类比列表</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#切片" class="sidebar-link">切片</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#切片的格式" class="sidebar-link">切片的格式</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#获取部分元素" class="sidebar-link">获取部分元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#索引正序和倒序" class="sidebar-link">索引正序和倒序</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#步长为负数" class="sidebar-link">步长为负数</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#集合set" class="sidebar-link">集合set</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#集合长度" class="sidebar-link">集合长度</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#添加元素" class="sidebar-link">添加元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#删除元素-2" class="sidebar-link">删除元素</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#字典" class="sidebar-link">字典</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#字典长度" class="sidebar-link">字典长度</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#访问元素-2" class="sidebar-link">访问元素</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#增加和修改" class="sidebar-link">增加和修改</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#删除" class="sidebar-link">删除</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#复杂数据结构" class="sidebar-link">复杂数据结构</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#条件判断" class="sidebar-link">条件判断</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#if语句" class="sidebar-link">if语句</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#if-else-语句" class="sidebar-link">if…else…语句</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#if-elif-else语句" class="sidebar-link">if…elif…else语句</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#一些案例-2" class="sidebar-link">一些案例</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#in和not-int" class="sidebar-link">in和not int</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#while循环语法" class="sidebar-link">while循环语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#死循环" class="sidebar-link">死循环</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#循环变量" class="sidebar-link">循环变量</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#break和contiune" class="sidebar-link">break和contiune</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#嵌套循环" class="sidebar-link">嵌套循环</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#for循环语法" class="sidebar-link">for循环语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#遍历操纵" class="sidebar-link">遍历操纵</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#range区间" class="sidebar-link">range区间</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#函数" class="sidebar-link">函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#函数定义格式" class="sidebar-link">函数定义格式</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#函数调用格式" class="sidebar-link">函数调用格式</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#第一个函数" class="sidebar-link">第一个函数</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#函数的参数" class="sidebar-link">函数的参数</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#函数返回值" class="sidebar-link">函数返回值</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#局部变量和全局变量" class="sidebar-link">局部变量和全局变量</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#函数注释" class="sidebar-link">函数注释</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#类" class="sidebar-link">类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#类的定义" class="sidebar-link">类的定义</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#对象" class="sidebar-link">对象</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#类的使用" class="sidebar-link">类的使用</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#面向对象" class="sidebar-link">面向对象</a></li></ul></li><li><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#继承" class="sidebar-link">继承</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#继承定义" class="sidebar-link">继承定义</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#构造函数" class="sidebar-link">构造函数</a></li><li class="sidebar-sub-header"><a href="/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/Python/#子类覆写构造" class="sidebar-link">子类覆写构造</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="python"><a href="#python" class="header-anchor">#</a> Python</h1> <p>python是一门强大的，开发效率高的语言。具备跨平台的特点。简单易学。开放性拓展性强。</p> <h2 id="python特点"><a href="#python特点" class="header-anchor">#</a> python特点</h2> <ul><li>Python is powerful… and fast;</li> <li>plays well with others;</li> <li>runs everywhere;</li> <li>is friendly &amp; easy to learn;</li> <li>is Open.</li></ul> <h2 id="python应用范围"><a href="#python应用范围" class="header-anchor">#</a> python应用范围</h2> <ul><li>游戏开发</li> <li>网站开发</li> <li>数据分析</li> <li>深度学习</li></ul> <h2 id="程序输出"><a href="#程序输出" class="header-anchor">#</a> 程序输出</h2> <h3 id="操作系统和程序"><a href="#操作系统和程序" class="header-anchor">#</a> 操作系统和程序</h3> <p>我们的电脑都会装上一个操作系统，我们会在操作系统上装上一些软件（比如QQ，微信等）。</p> <p>我们口头都会说，我们打开了某某软件。这里的含义其实就是我在运行某个程序。</p> <p>程序是运行在操作系统上面的，通过运行起来的程序，我们称之为 <strong>进程</strong> 。</p> <p>我们可以把运行中的进程当成孤立的个体，一个黑盒子，也就是你不知道里面到底在干什么。</p> <p>即使这个程序是你写的，在运行过程中，你也不一定知道在干什么，干到了哪一步，正在进入哪一段逻辑。</p> <p>如果需要查看程序内部运行情况，需要程序内部向外告知，告知的方式其实就是输出日志。</p> <h3 id="打印输出"><a href="#打印输出" class="header-anchor">#</a> 打印输出</h3> <p>程序可以通过<code>print</code>输出函数，将程序执行的数据输出到控制台</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello python'</span><span class="token punctuation">)</span>
+</code></pre></div><p>!!!note
+<code>print()</code>是打印函数，括号内是要打印显示的内容.</p> <div class="language- extra-class"><pre class="language-text"><code>如果打印的是一句话，需要用`''`包起来，数字的话可以不用。
+</code></pre></div><h2 id="注释"><a href="#注释" class="header-anchor">#</a> 注释</h2> <h3 id="单行注释"><a href="#单行注释" class="header-anchor">#</a> 单行注释</h3> <p>单行注释以<code>#</code>开头,<code>#</code>后空一格, 后跟上注释的内容, 例如:</p> <div class="language- extra-class"><pre class="language-text"><code>linenums
+# 下面代码是给黑马无人小车打招呼
+print('hello 黑马无人小车')
+</code></pre></div><h3 id="多行注释"><a href="#多行注释" class="header-anchor">#</a> 多行注释</h3> <p>如果注释内容比较多的话,可以使用多行注释</p> <p>多行注释以<code>'''</code>开头,<code>'''</code>结尾,或者<code>&quot;&quot;&quot;</code>开头,<code>&quot;&quot;&quot;</code>结尾</p> <div class="language- extra-class"><pre class="language-text"><code>linenums
+'''
+第一行代码是给黑马无人小车打招呼
+第二行代码是给传智播客打招呼
+'''
+print('hello 黑马无人小车')
+print('hello 传智播客')
+</code></pre></div><h2 id="运算符"><a href="#运算符" class="header-anchor">#</a> 运算符</h2> <h3 id="加减乘除基本运算"><a href="#加减乘除基本运算" class="header-anchor">#</a> 加减乘除基本运算</h3> <ol><li>加法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(1 + 1)
+</code></pre></div><ol><li>减法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(3 - 1)
+</code></pre></div><ol><li>乘法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(3 * 2)
+</code></pre></div><ol><li>除法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(8 / 4)
+</code></pre></div><ol><li>取余数</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(7 % 2)
+</code></pre></div><p>!!!note
+加，减，乘，除，取余分别用<code>+</code>,<code>-</code>,<code>*</code>,<code>/</code>,<code>%</code>来表示</p> <h3 id="混合运算"><a href="#混合运算" class="header-anchor">#</a> 混合运算</h3> <div class="language- extra-class"><pre class="language-text"><code>print((2 + 3) * 5)
+print((5 - 3) * 2)
+print((5 + 3) / 2)
+print((5 + 3) * (2 + 1))
+</code></pre></div><blockquote><p>混合运算时，括号具备优先级</p></blockquote> <h3 id="特殊运算符"><a href="#特殊运算符" class="header-anchor">#</a> 特殊运算符</h3> <ol><li>求幂</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(3 ** 2)
+</code></pre></div><ol><li>整数除法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>print(7 // 3)
+</code></pre></div><blockquote><p><code>**</code> 取幂操作符，前面是数字，后面是幂</p> <p><code>//</code> 是整数除，除出来的结果取整数</p></blockquote> <h2 id="变量"><a href="#变量" class="header-anchor">#</a> 变量</h2> <p><strong>变量</strong> 是用来描述计算机中的 <strong>数据存储空间</strong> 的。</p> <p>我们可以通过变量来保存定义的数据。</p> <h3 id="变量的定义"><a href="#变量的定义" class="header-anchor">#</a> 变量的定义</h3> <p>规则： <code>变量名</code> = <code>存储的值</code></p> <p>例如，我定义了一个变量age，用来存储一个数字：</p> <div class="language- extra-class"><pre class="language-text"><code>age = 18
+print(age)
+</code></pre></div><h3 id="变量的命名规则"><a href="#变量的命名规则" class="header-anchor">#</a> 变量的命名规则</h3> <p>变量名称遵循以下规则:</p> <ul><li>只能由数字,字母,_(下划线)组成</li> <li>不能以数字开头</li> <li>不能是关键字</li> <li>区分大小写</li></ul> <p>!!!tip
+关键字是只系统默认已经占用的词，编程人员不得以这些命名。</p> <div class="language- extra-class"><pre class="language-text"><code>python的关键字(33个)有：
+
+`and`, `as`, `assert`, `break`,
+`class`, `continue`, `def`, `del`,
+`elif`, `else`, `except`, `finally`,
+`for`, `from`, `global`, `if`,
+`import`, `in`, `is`, `lambda`,
+`nonlocal`, `not`, `or`, `pass`,
+`raise`, `return`, `try`, `while`,
+`with`, `yield`,
+`False`, `None`, `True`
+</code></pre></div><p>例如以下命名就是不合法的:</p> <div class="language- extra-class"><pre class="language-text"><code>itcast.cn = '你好'
+</code></pre></div><p>!!!warning
+名称中包含了<code>.</code>，是不合法的</p> <h3 id="变量命名规范"><a href="#变量命名规范" class="header-anchor">#</a> 变量命名规范</h3> <p>我们在编写python代码时， 通常采用下划线命名法:</p> <div class="language- extra-class"><pre class="language-text"><code>person_count = 100
+</code></pre></div><p><code>person</code> 和 <code>count</code>是不同的两个单词，命名时希望包含组合意思。
+我们采用<code>_</code>进行连接。这是我们推荐的方式。</p> <div class="language- extra-class"><pre class="language-text"><code>当然也可以采用`personCount`或者`PersonCount`这两种方式命名(小驼峰和大驼峰命名法)，
+但是不推荐。
+
+以后会用到别人的api，例如Qt的api，使用的就是驼峰命名，主要是为了保证跨语言api相同。
+</code></pre></div><h3 id="常见的数据类型"><a href="#常见的数据类型" class="header-anchor">#</a> 常见的数据类型</h3> <h4 id="整数"><a href="#整数" class="header-anchor">#</a> 整数</h4> <div class="language- extra-class"><pre class="language-text"><code>age = 10
+</code></pre></div><h4 id="浮点数-小数"><a href="#浮点数-小数" class="header-anchor">#</a> 浮点数(小数)</h4> <div class="language- extra-class"><pre class="language-text"><code>age = 10.5
+</code></pre></div><h4 id="布尔类型"><a href="#布尔类型" class="header-anchor">#</a> 布尔类型</h4> <div class="language- extra-class"><pre class="language-text"><code>is_ok = True
+</code></pre></div><h4 id="字符串类型"><a href="#字符串类型" class="header-anchor">#</a> 字符串类型</h4> <div class="language- extra-class"><pre class="language-text"><code>name = '传智播客'
+</code></pre></div><h3 id="一些案例"><a href="#一些案例" class="header-anchor">#</a> 一些案例</h3> <h4 id="多变量赋值"><a href="#多变量赋值" class="header-anchor">#</a> 多变量赋值</h4> <div class="language- extra-class"><pre class="language-text"><code>name, age, gender = '黑马王子', 10, True
+</code></pre></div><p>!!!note
+python可以同时为多个变量赋值</p> <h4 id="变量运算"><a href="#变量运算" class="header-anchor">#</a> 变量运算</h4> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+age = 10
+age = age + 5
+print(age)
+</code></pre></div><p>或者</p> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+age = 10
+age += 5
+print(age)
+</code></pre></div><p>!!!note
+变量是数字类型时，是可以直接参与运算的。</p> <div class="language- extra-class"><pre class="language-text"><code>`+=`: 在自身的基础上 **加上** 一个值
+
+`-=`: 在自身的基础上 **减去** 一个值
+
+`*=`: 在自身的基础上 **乘以** 一个值
+
+`/=`: 在自身的基础上 **除以** 一个值
+</code></pre></div><h2 id="列表定义"><a href="#列表定义" class="header-anchor">#</a> 列表定义</h2> <p>列表是一个序列(sequence),我们可以理解为一个装数据的容器。</p> <p>Python中，列表使用频率很频繁。可以以存储一串数据，存储的每一个数据，我们称之为 <strong>元素</strong> 。</p> <p>列表的类型为<code>list</code>, 用一对<code>[]</code> 表示</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+print(names)
+print(type(names))
+</code></pre></div><h3 id="列表长度"><a href="#列表长度" class="header-anchor">#</a> 列表长度</h3> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+print(len(names))
+</code></pre></div><p>通过<code>len</code>函数获得列表的长度</p> <h3 id="访问元素"><a href="#访问元素" class="header-anchor">#</a> 访问元素</h3> <p>通过下标进行访问, <strong>列表下标从0开始</strong> <img src="https://xiaokaijun.gitee.io/2022/01/12/winter-02-python/py_1.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[-1])
+</code></pre></div><p>!!!note
+通过下标进行访问元素，下标从0开始。</p> <div class="language- extra-class"><pre class="language-text"><code>下标也可以为负数，为 **当前下标减去列表长度**
+
+超出长度，会有异常
+</code></pre></div><h3 id="增加元素"><a href="#增加元素" class="header-anchor">#</a> 增加元素</h3> <p>通过<code>append</code>函数添加元素</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names.append('czxy')
+print(names)
+</code></pre></div><p>通过<code>insert</code>函数插入指定位置</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names.insert(1, 'czxy')
+print(names)
+</code></pre></div><h3 id="删除元素"><a href="#删除元素" class="header-anchor">#</a> 删除元素</h3> <p>通过<code>remove</code>函数移除指定元素</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names.remove('bxg')
+print(names)
+</code></pre></div><p>通过<code>del</code>函数移除指定下标</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+del names[1]
+print(names)
+</code></pre></div><h3 id="修改元素"><a href="#修改元素" class="header-anchor">#</a> 修改元素</h3> <p>通过索引来修改元素</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names[1] = 'czxy'
+print(names)
+</code></pre></div><h3 id="索引"><a href="#索引" class="header-anchor">#</a> 索引</h3> <p>通过元素获得下标索引</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+index = names.index('itheima')
+print(index)
+</code></pre></div><h3 id="反转"><a href="#反转" class="header-anchor">#</a> 反转</h3> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names.reverse()
+print(names)
+</code></pre></div><h3 id="排序"><a href="#排序" class="header-anchor">#</a> 排序</h3> <p>升序</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names.sort()
+print(names)
+</code></pre></div><p>降序</p> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+names.sort(reverse=True)
+print(names)
+</code></pre></div><h2 id="元组"><a href="#元组" class="header-anchor">#</a> 元组</h2> <p>Python的元组与列表类似，也是容器的一种,不同之处在于元组的元素 <strong>不能修改</strong></p> <p>元组的类型为<code>tuple</code>, 用一对<code>()</code> 表示，中间用<code>,</code>分隔</p> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast', 'itheima', 'bxg')
+print(names)
+print(type(names))
+</code></pre></div><h3 id="定义注意"><a href="#定义注意" class="header-anchor">#</a> 定义注意</h3> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast')
+</code></pre></div><p>!!!error
+以上是错误的元组定义.</p> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast', )
+names = ('itcast', 'itheima')
+</code></pre></div><p>!!!success
+以上是元组的正确定义.</p> <div class="language- extra-class"><pre class="language-text"><code>如果定义的元组中只有一个元素，后面要跟一个`,`
+</code></pre></div><h3 id="组包解包交换"><a href="#组包解包交换" class="header-anchor">#</a> 组包解包交换</h3> <h4 id="元组具备自动组包功能"><a href="#元组具备自动组包功能" class="header-anchor">#</a> 元组具备自动组包功能</h4> <div class="language- extra-class"><pre class="language-text"><code>names = 'itcast', 'itheima', 'bxg'
+print(names)
+print(type(names))
+</code></pre></div><p>!!!note
+names的类型是元组类型,这就是元组的自动组包特征</p> <h4 id="元组具备自动解包功能"><a href="#元组具备自动解包功能" class="header-anchor">#</a> 元组具备自动解包功能</h4> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast', 'itheima', 'bxg')
+name1, name2, name3 = names
+print(name1)
+print(name2)
+print(name3)
+</code></pre></div><h4 id="元组具备数据交互功能"><a href="#元组具备数据交互功能" class="header-anchor">#</a> 元组具备数据交互功能</h4> <p>传统的数据交换:</p> <div class="language- extra-class"><pre class="language-text"><code>a = 10
+b = 5
+tmp = a
+a = b
+b = tmp
+print(&quot;a = {}, b = {}&quot;.format(a, b))
+</code></pre></div><p>元组数据交换:</p> <div class="language- extra-class"><pre class="language-text"><code>a = 10
+b = 5
+a, b = b, a
+print(&quot;a = {}, b = {}&quot;.format(a, b))
+</code></pre></div><h3 id="类比列表"><a href="#类比列表" class="header-anchor">#</a> 类比列表</h3> <h4 id="访问"><a href="#访问" class="header-anchor">#</a> 访问</h4> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast', 'itheima', 'bxg')
+print(names[0])
+</code></pre></div><h4 id="索引-2"><a href="#索引-2" class="header-anchor">#</a> 索引</h4> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast', 'itheima', 'bxg')
+index = names.index('itheima')
+print(index)
+</code></pre></div><h4 id="添加-删除-修改-排序"><a href="#添加-删除-修改-排序" class="header-anchor">#</a> 添加，删除，修改，排序</h4> <p>tuple是只读的数据类型。因此，不可以做任何修改操作。</p> <p>!!!error
+tuple不具备修改的能力。</p> <div class="language- extra-class"><pre class="language-text"><code> 添加，删除，修改，排序等功能是不存在的。
+</code></pre></div><h2 id="切片"><a href="#切片" class="header-anchor">#</a> 切片</h2> <p>切片，英文单词为<code>slicing</code>。</p> <p>python中，用来取列表(list),元组(tuple),字符串(str)部分元素的操作。</p> <h3 id="切片的格式"><a href="#切片的格式" class="header-anchor">#</a> 切片的格式</h3> <div class="language- extra-class"><pre class="language-text"><code>data[start:end:step]
+</code></pre></div><p>!!!note
+<code>data</code> 为 list或者tuple或者str。</p> <div class="language- extra-class"><pre class="language-text"><code>`start` 为 开始索引
+
+`end` 为结束索引
+
+`step` 为步长
+
+**包含开始索引，不包含结束索引**
+</code></pre></div><h3 id="获取部分元素"><a href="#获取部分元素" class="header-anchor">#</a> 获取部分元素</h3> <p>需求： 获取列表前3个元素.</p> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+nums = [0, 1, 2, 3, 4, 5, 6]
+print(nums[0:3:1])
+</code></pre></div><p>如果步长为1，可以省略</p> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+nums = [0, 1, 2, 3, 4, 5, 6]
+# 省略步长
+print(nums[0:3:])
+# 或者完全省略
+print(nums[0:3])
+</code></pre></div><p>如果开始索引为0，可以省略</p> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+nums = [0, 1, 2, 3, 4, 5, 6]
+print(nums[0:3])
+print(nums[:3])
+</code></pre></div><p>如果为末尾结束，可以省略结尾索引</p> <div class="language- extra-class"><pre class="language-text"><code>nums = [0, 1, 2, 3, 4, 5, 6]
+# 获取从索引2开始
+print(nums[0:3])
+print(nums[:3])
+</code></pre></div><h3 id="索引正序和倒序"><a href="#索引正序和倒序" class="header-anchor">#</a> 索引正序和倒序</h3> <p>索引分为正序和倒序， 正序自左至右，从0开始；倒序自右至左，从-1开始。
+<img src="https://xiaokaijun.gitee.io/2022/01/12/winter-02-python/py_3.png" alt="img"></p> <p>需求： 获取列表前3个元素.</p> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+nums = [0, 1, 2, 3, 4, 5, 6]
+# 方式一
+print(nums[0:3])
+# 方式二 
+print(nums[0:-4])
+</code></pre></div><h3 id="步长为负数"><a href="#步长为负数" class="header-anchor">#</a> 步长为负数</h3> <p>步长为负数时，代表反向切片.</p> <p>需求： 获取列表中从下标为2开始的3个元素，要求倒序输出.</p> <div class="language- extra-class"><pre class="language-text"><code>nums = [0, 1, 2, 3, 4, 5, 6]
+print(nums[4:1:-1])
+</code></pre></div><h2 id="集合set"><a href="#集合set" class="header-anchor">#</a> 集合set</h2> <p>Python的集合与列表类似，也是容器的一种,不同之处在于:</p> <ul><li><strong>列表是有序的</strong> , <strong>集合是无序的</strong>。</li> <li><strong>列表的元素可以重复</strong>, <strong>集合的元素不可以重复</strong></li></ul> <p>集合的类型为<code>set</code>, 用一对<code>{}</code> 表示，中间用<code>,</code>分隔</p> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+print(names)
+print(type(names))
+</code></pre></div><h3 id="集合长度"><a href="#集合长度" class="header-anchor">#</a> 集合长度</h3> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+print(len(names))
+</code></pre></div><p>通过<code>len</code>函数获得列表的长度</p> <h3 id="添加元素"><a href="#添加元素" class="header-anchor">#</a> 添加元素</h3> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+names.add('czxy')
+print(names)
+</code></pre></div><h3 id="删除元素-2"><a href="#删除元素-2" class="header-anchor">#</a> 删除元素</h3> <p>删除指定元素, 没有时报错</p> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+names.remove('itheima')
+print(names)
+</code></pre></div><p>删除指定元素, 没有时不做任何操作，不报错</p> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+names.discard('itheima')
+print(names)
+</code></pre></div><p>随机删除元素</p> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+names.pop()
+print(names)
+</code></pre></div><h2 id="字典"><a href="#字典" class="header-anchor">#</a> 字典</h2> <p>字典(dictionary) 和列表从功能角度而言，都是一个装数据的容器.</p> <ul><li>字典可以存储多个数据。</li> <li>字典采用 <strong>键值对</strong> 方式存储数据</li> <li>字典没有索引，是无序的</li> <li>字典的键是唯一的</li></ul> <p><img src="https://xiaokaijun.gitee.io/2022/01/12/winter-02-python/py_4.png" alt="img"></p> <p>字典的类型为’dict’, 用一对’{}’包裹， 每一组元素采用<code>,</code>分隔，一组元素包含<code>key</code>和<code>value</code>,<code>key</code>和<code>value</code>采用<code>:</code> 分隔。</p> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+print(d)
+print(type(d))
+</code></pre></div><h3 id="字典长度"><a href="#字典长度" class="header-anchor">#</a> 字典长度</h3> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+print(len(d))
+</code></pre></div><p>通过<code>len</code>函数获得字典元素的数量</p> <h3 id="访问元素-2"><a href="#访问元素-2" class="header-anchor">#</a> 访问元素</h3> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+print(d['name'])
+</code></pre></div><h3 id="增加和修改"><a href="#增加和修改" class="header-anchor">#</a> 增加和修改</h3> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+d['name'] = 'itheima'
+d['address'] = 'sz'
+print(d)
+</code></pre></div><p>!!!note
+不存在key就是添加。存在就是修改</p> <h3 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h3> <h4 id="del删除"><a href="#del删除" class="header-anchor">#</a> del删除</h4> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+del d['name']
+print(d)
+</code></pre></div><h4 id="pop删除"><a href="#pop删除" class="header-anchor">#</a> pop删除</h4> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+value = d.pop('name')
+print(d)
+print(value)
+</code></pre></div><p>pop删除时会将删除元素的value返回</p> <h4 id="clear清空"><a href="#clear清空" class="header-anchor">#</a> clear清空</h4> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+d.clear()
+print(d)
+</code></pre></div><h3 id="复杂数据结构"><a href="#复杂数据结构" class="header-anchor">#</a> 复杂数据结构</h3> <p>字典可以描述复杂的数据结构.</p> <p>例如，我们描述一个学生可以这个样子:</p> <div class="language- extra-class"><pre class="language-text"><code>stu = {'name': 'itcast', 'age': 10, 'gender': True}
+</code></pre></div><p>我们描述多个个学生，用学生的名字做唯一标识</p> <div class="language- extra-class"><pre class="language-text"><code>stus = {
+    'itcast': {'age': 10, 'gender': True},
+    'itheima': {'age': 12, 'gender': True},
+    'bxg': {'age': 14, 'gender': False},
+}
+</code></pre></div><h2 id="条件判断"><a href="#条件判断" class="header-anchor">#</a> 条件判断</h2> <p><img src="https://xiaokaijun.gitee.io/2022/01/12/winter-02-python/py_5.png" alt="img"></p> <h3 id="if语句"><a href="#if语句" class="header-anchor">#</a> if语句</h3> <p>代码格式:</p> <div class="language- extra-class"><pre class="language-text"><code>if 条件:
+    条件成立时，要做的事情
+</code></pre></div><p>示例：</p> <div class="language- extra-class"><pre class="language-text"><code>if 1 &lt; 2:
+    print(&quot;1 &lt; 2&quot;)
+print('hello')
+</code></pre></div><h3 id="if-else-语句"><a href="#if-else-语句" class="header-anchor">#</a> if…else…语句</h3> <p>代码格式:</p> <div class="language- extra-class"><pre class="language-text"><code>if 条件:
+    条件成立时，要做的事情
+else:
+    条件不成立时，要做的事情
+</code></pre></div><p>示例：</p> <div class="language- extra-class"><pre class="language-text"><code>if 1 &lt; 2:
+    print(&quot;ok&quot;)
+else:
+    print(&quot;not ok&quot;)
+</code></pre></div><h3 id="if-elif-else语句"><a href="#if-elif-else语句" class="header-anchor">#</a> if…elif…else语句</h3> <p>代码格式:</p> <div class="language- extra-class"><pre class="language-text"><code>if 条件1:
+    条件1成立时，要做的事情
+elif 条件2:
+    条件2成立时，要做的事情
+elif 条件3:
+    条件3成立时，要做的事情
+else:
+    以上条件都不满足时，要做的事情
+</code></pre></div><p>示例：</p> <div class="language- extra-class"><pre class="language-text"><code>if 1 &gt; 2:
+    print(&quot;logic if&quot;)
+elif 1 &gt; 3:
+    print(&quot;logic elif&quot;)
+else:
+    print(&quot;logic else&quot;)
+</code></pre></div><h3 id="一些案例-2"><a href="#一些案例-2" class="header-anchor">#</a> 一些案例</h3> <h4 id="input输入函数"><a href="#input输入函数" class="header-anchor">#</a> input输入函数</h4> <p><code>input</code>函数，可以帮助我们的程序接收外部提供的数据，一个阻塞式的代码</p> <div class="language- extra-class"><pre class="language-text"><code>age = input('请输入年龄')
+print(age)
+</code></pre></div><h4 id="if-else案例"><a href="#if-else案例" class="header-anchor">#</a> if…else案例</h4> <p>需求:</p> <ol><li>输入用户年龄</li> <li>判断是否满 18 岁 （&gt;=）</li> <li>如果满 18 岁，允许进网吧嗨皮</li> <li>如果未满 18 岁，提示回家写作业</li></ol> <div class="language- extra-class"><pre class="language-text"><code>age = int(input('请输入你的年纪:'))
+# if判断
+if age&gt;=18:
+    print('允许进网吧嗨皮')
+else:
+    print('回家写作业')
+</code></pre></div><h4 id="if-elif-else案例"><a href="#if-elif-else案例" class="header-anchor">#</a> if…elif…else案例</h4> <p>需求:
+需求</p> <ol><li>定义 holiday 字符串变量记录节日名称</li> <li>如果是 情人节 应该 买玫瑰／看电影</li> <li>如果是 平安夜 应该 买苹果／吃大餐</li> <li>如果是 生日 应该 买蛋糕</li> <li>其他的日子每天都是节日啊……</li></ol> <div class="language- extra-class"><pre class="language-text"><code>holiday = input('请输入节日名称')
+if holiday == '情人节':
+    print('买玫瑰/看电影')
+elif holiday == '平安夜':
+    print('买苹果/吃大餐')
+elif holiday == '生日':
+    print('买蛋糕')
+else:
+    print('每天都是节日,每天一个红包')
+</code></pre></div><h4 id="嵌套案例"><a href="#嵌套案例" class="header-anchor">#</a> 嵌套案例</h4> <p>需求:</p> <ol><li>定义布尔型变量 has_ticket 表示是否有车票</li> <li>定义整型变量 knife_length 表示刀的长度，单位：厘米</li> <li>首先检查是否有车票，如果有，才允许进行 安检</li> <li>安检时，需要检查刀的长度，判断是否超过 20 厘米
+果超过 20 厘米，提示刀的长度，不允许上车
+如果不超过 20 厘米，安检通过</li> <li>如果没有车票，不允许进门</li></ol> <div class="language- extra-class"><pre class="language-text"><code>has_ticket = input(&quot;请输入是否有车票:&quot;)
+# 0 没有 1 有
+has_ticket = int(has_ticket)
+knife_length = input(&quot;请输入刀的长度:&quot;)
+knife_length = int(knife_length)
+
+if bool(has_ticket):
+    if knife_length&gt;20:
+        print(&quot;不能进站&quot;)
+    else:
+        print(&quot;可以进站&quot;)
+else:
+    print(&quot;不能进站&quot;)
+</code></pre></div><h3 id="in和not-int"><a href="#in和not-int" class="header-anchor">#</a> in和not int</h3> <p><code>in</code>和<code>not int</code>是python的操作符，用来判断元素释放在容器中，如果在，返回True，否则False。</p> <p>这里的容器包含了我们前面学习的<code>列表list</code>,<code>元组tuple</code>,<code>集合set</code>,<code>字典set</code>以及<code>字符串str</code></p> <h4 id="字符串"><a href="#字符串" class="header-anchor">#</a> 字符串</h4> <div class="language- extra-class"><pre class="language-text"><code>str = 'itcast'
+print('it' in str)
+</code></pre></div><h4 id="列表"><a href="#列表" class="header-anchor">#</a> 列表</h4> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+print('itheima' in names)
+</code></pre></div><h4 id="元组-2"><a href="#元组-2" class="header-anchor">#</a> 元组</h4> <div class="language- extra-class"><pre class="language-text"><code>names = ('itcast', 'itheima', 'bxg')
+print('itheima' in names)
+</code></pre></div><h4 id="集合"><a href="#集合" class="header-anchor">#</a> 集合</h4> <div class="language- extra-class"><pre class="language-text"><code>names = {'itcast', 'itheima', 'bxg'}
+print('itheima' in names)
+</code></pre></div><h4 id="字典-2"><a href="#字典-2" class="header-anchor">#</a> 字典</h4> <p>字典中，in 和 not in主要用来判断 字典的键</p> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+print('name' in d)
+print('age' in d)
+</code></pre></div><h2 id="while循环语法"><a href="#while循环语法" class="header-anchor">#</a> while循环语法</h2> <div class="language- extra-class"><pre class="language-text"><code>while 条件:
+    循环逻辑代码
+</code></pre></div><h3 id="死循环"><a href="#死循环" class="header-anchor">#</a> 死循环</h3> <p>死循环在程序中有一定的使用场景,可以保证程序不会停止。</p> <div class="language- extra-class"><pre class="language-text"><code>import time
+
+while True:
+    print('hello itcast')
+    time.sleep(1)
+</code></pre></div><p>!!!note
+<code>time</code>是python系统内置的模块，提供时间操作相关的api。</p> <div class="language- extra-class"><pre class="language-text"><code>`time.sleep`可以帮助睡眠
+</code></pre></div><h3 id="循环变量"><a href="#循环变量" class="header-anchor">#</a> 循环变量</h3> <p>可以通过变量来控制循环</p> <div class="language- extra-class"><pre class="language-text"><code># 1.定义循环变量
+i = 0
+# 2.使用while判断条件
+while i &lt; 10000:
+    # 要重复执行的代码
+    print('媳妇儿,我错了')
+    # 3.修改循环变量
+    i += 1
+</code></pre></div><h3 id="break和contiune"><a href="#break和contiune" class="header-anchor">#</a> break和contiune</h3> <ul><li><code>break</code>: 某一条件满足时，不再执行循环体中后续重复的代码，并退出循环。</li> <li><code>continue</code>: 某一条件满足时，不再执行本次循环体中后续重复的代码，但进入下一次循环判断.</li></ul> <p>break示例:</p> <div class="language- extra-class"><pre class="language-text"><code>i = 0
+while i &lt; 5:
+    if i == 3:
+        break # 5后面的数据都不会输出
+    print(i)
+    i += 1
+</code></pre></div><p>contiune示例:</p> <div class="language- extra-class"><pre class="language-text"><code>i = 0
+while i &lt; 5:
+    i += 1
+    if i-1 == 3:
+        continue # 除了3都会输出
+    print(i-1)
+</code></pre></div><h3 id="嵌套循环"><a href="#嵌套循环" class="header-anchor">#</a> 嵌套循环</h3> <p>while 里面还有 while</p> <div class="language- extra-class"><pre class="language-text"><code>while 条件1:
+    ......
+    while 条件2：
+        ......
+    ......
+</code></pre></div><p>示例代码:</p> <div class="language- extra-class"><pre class="language-text"><code># 外层循环
+i = 0
+while i &lt; 5:
+    # 内层循环
+    j = 0
+    while j&lt;3:
+        print(j)
+        j+=1
+    i += 1
+</code></pre></div><h2 id="for循环语法"><a href="#for循环语法" class="header-anchor">#</a> for循环语法</h2> <p>for循环的主要作用是遍历数据(容器)中的元素 字符串、列表等高级数据类型都属于容器,都可以通过for循环遍历.</p> <p>for循环的语法格式如下:</p> <div class="language- extra-class"><pre class="language-text"><code>for 临时变量 in 列表或者字符串等可迭代对象:
+    执行的代码
+</code></pre></div><h3 id="遍历操纵"><a href="#遍历操纵" class="header-anchor">#</a> 遍历操纵</h3> <h4 id="字符串-2"><a href="#字符串-2" class="header-anchor">#</a> 字符串</h4> <div class="language- extra-class"><pre class="language-text"><code>str = 'itheima'
+# ele普通变量  接收容器中的元素
+for ele in str:
+    print(ele)
+</code></pre></div><h4 id="遍历列表元组集合"><a href="#遍历列表元组集合" class="header-anchor">#</a> 遍历列表元组集合</h4> <div class="language- extra-class"><pre class="language-text"><code>names = ['itcast', 'itheima', 'bxg']
+for name in names:
+    print(name)
+</code></pre></div><h4 id="遍历字典"><a href="#遍历字典" class="header-anchor">#</a> 遍历字典</h4> <p>字典遍历过程中，获得的是字典的键.</p> <div class="language- extra-class"><pre class="language-text"><code>d = {'name': 'itcast', 'age': 10, 'height': 1.75, 'gender': True}
+for key in d:
+    print(&quot;key = {}, value = {}&quot;.format(key, d[key]))
+</code></pre></div><h3 id="range区间"><a href="#range区间" class="header-anchor">#</a> range区间</h3> <p><code>range</code>是一个内置的函数，可以自动帮我们创建 <strong>整数列表</strong>.</p> <p>语法格式为:</p> <div class="language- extra-class"><pre class="language-text"><code>range(start, end, step)
+</code></pre></div><p>!!!note</p> <div class="language- extra-class"><pre class="language-text"><code>* `start`为起始值
+* `end`为结束值
+* `step`为步长
+
+
+意思为，创建一个从`start`开始，间隔`step`,一直到`end`结束的列表
+
+**包含start，不包含end**
+arr = range(1, 10, 2)
+print(arr)
+</code></pre></div><h4 id="步长为1"><a href="#步长为1" class="header-anchor">#</a> 步长为1</h4> <p>步长为1时，可以省略</p> <div class="language- extra-class"><pre class="language-text"><code>arr = range(1, 10)
+print(arr)
+</code></pre></div><h4 id="起始值为0-步长为1"><a href="#起始值为0-步长为1" class="header-anchor">#</a> 起始值为0，步长为1</h4> <p>起始值为0，步长为1，起始值可以省略，步长也可以省略</p> <div class="language- extra-class"><pre class="language-text"><code>arr = range(10)
+print(arr)
+</code></pre></div><h4 id="遍历range"><a href="#遍历range" class="header-anchor">#</a> 遍历range</h4> <div class="language- extra-class"><pre class="language-text"><code>for num in range(0, 10, 2):
+    print(num)
+</code></pre></div><h2 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h2> <p>函数是程序非常重要的组成部分,是计算机执行命令的单元.</p> <p>所谓函数，就是把 具有独立功能的代码块 组织为一个整体，在需要的时候 调用.</p> <p>使用函数可以提高编写的效率以及 <strong>代码的重用</strong>.</p> <p>函数的使用包含两个部分:</p> <ul><li>定义函数: 在函数中编写代码，实现功能</li> <li>调用函数: 执行编写的代码</li></ul> <h3 id="函数定义格式"><a href="#函数定义格式" class="header-anchor">#</a> 函数定义格式</h3> <div class="language- extra-class"><pre class="language-text"><code>def 函数名():
+    函数封装的代码
+</code></pre></div><p>!!!note
+<code>def</code>时英文<code>define</code>的缩写，意为声明</p> <div class="language- extra-class"><pre class="language-text"><code>`函数名`是根据自己的业务来取的，和变量命名规则相同。
+</code></pre></div><h3 id="函数调用格式"><a href="#函数调用格式" class="header-anchor">#</a> 函数调用格式</h3> <div class="language- extra-class"><pre class="language-text"><code>函数名()
+</code></pre></div><h3 id="第一个函数"><a href="#第一个函数" class="header-anchor">#</a> 第一个函数</h3> <p>需求:</p> <ol><li>编写一个打招呼 say_hello 的函数，封装三行打招呼的代码</li> <li>在函数下方调用打招呼的代码</li></ol> <div class="language- extra-class"><pre class="language-text"><code># 定义函数
+def say_hello():
+    print('hello itcast')
+    print('hello itheima')
+    print('hello bxg')
+
+# 调用函数
+say_hello()
+</code></pre></div><h3 id="函数的参数"><a href="#函数的参数" class="header-anchor">#</a> 函数的参数</h3> <p>函数的参数，可以传递数据给函数内部 参数的作用是增加函数的 通用性.</p> <p>定义和调用格式:</p> <div class="language- extra-class"><pre class="language-text"><code># 定义函数
+def 函数名(参数1,参数2):
+    函数代码
+
+# 调用函数
+函数名(参数1,参数2)
+</code></pre></div><p>需求:</p> <ul><li>定义函数,传递a和b,求a+b的和</li></ul> <div class="language- extra-class"><pre class="language-text"><code>def sum(a,b):
+    result = a + b
+    print(result)
+
+# 调用
+sum(10,20)
+</code></pre></div><h3 id="函数返回值"><a href="#函数返回值" class="header-anchor">#</a> 函数返回值</h3> <p>定义和调用格式:</p> <div class="language- extra-class"><pre class="language-text"><code># 定义函数
+def 函数名(参数1,参数2):
+    函数代码
+    return 返回值
+
+# 调用函数
+返回值 = 函数名(参数1,参数2)
+</code></pre></div><p>需求:</p> <ul><li>定义函数返回两个数最大值</li></ul> <div class="language- extra-class"><pre class="language-text"><code># 定义函数
+def max_value(a,b):
+    if a &gt; b:
+        return a
+    else:
+        return b
+
+# 调用函数
+v = max_value(10,20)
+</code></pre></div><h4 id="多返回值"><a href="#多返回值" class="header-anchor">#</a> 多返回值</h4> <p>python函数可以返回多个结果</p> <p>需求:</p> <ul><li>计算两个数的加和减</li></ul> <div class="language- extra-class"><pre class="language-text"><code>def cacl(a, b):
+    sum = a + b
+    result = a-b
+    return sum,result
+</code></pre></div><h3 id="局部变量和全局变量"><a href="#局部变量和全局变量" class="header-anchor">#</a> 局部变量和全局变量</h3> <h4 id="局部变量"><a href="#局部变量" class="header-anchor">#</a> 局部变量</h4> <ul><li>局部变量,指的是在函数内部定义的变量</li> <li>局部变量的目的是存储需要临时保存的数据</li></ul> <div class="language- extra-class"><pre class="language-text"><code>def func1():
+    # 局部变量
+    b = 20
+    print('hello %d' % b)
+</code></pre></div><h4 id="全局变量"><a href="#全局变量" class="header-anchor">#</a> 全局变量</h4> <ul><li>全局变量是在整个py文件中声明，全局范围内都可以访问</li></ul> <div class="language- extra-class"><pre class="language-text"><code># 全局变量
+m = 10
+n = 20
+
+def func():
+    # 函数内访问全局变量
+    print(m)
+</code></pre></div><h4 id="函数内修改全局变量"><a href="#函数内修改全局变量" class="header-anchor">#</a> 函数内修改全局变量</h4> <div class="language- extra-class"><pre class="language-text"><code># 定义全局变量
+m = 10
+
+def func():
+    # 使用global声明全局变量
+    global m
+    # 将m修改成20
+    m = 30
+    print('函数内部m = %d' % m)
+</code></pre></div><h3 id="函数注释"><a href="#函数注释" class="header-anchor">#</a> 函数注释</h3> <p>函数名并不能完全的表示出函数的含义,定义函数的时候就需要给函数加上注释</p> <p>函数的注释就是文档注释</p> <p>注释的规则和格式如下:</p> <ul><li>注释应该定义在函数的下方</li> <li>使用三对引号注释</li></ul> <div class="language- extra-class"><pre class="language-text"><code>def say_hello():
+    '''
+    说hello的函数
+    :return:
+    '''
+    print('hello itcast')
+</code></pre></div><h2 id="类"><a href="#类" class="header-anchor">#</a> 类</h2> <h3 id="类的定义"><a href="#类的定义" class="header-anchor">#</a> 类的定义</h3> <ul><li>属性(变量)</li> <li>函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>class MyClass:
+    def __init__(self):
+        self.name = 'itcast'
+    
+    def say_hello(self):
+        print('hello')
+</code></pre></div><p>!!!note
+<code>class</code>为关键字，用来声明一个类</p> <div class="language- extra-class"><pre class="language-text"><code>`__init__`是构造函数，构造函数也是函数，是一个具体实例对象创建时默认调用的函数。
+
+`self`表示当前创建实例对象本身
+
+类中的函数，有个特点，默认第一个参数都是`self`
+</code></pre></div><h3 id="对象"><a href="#对象" class="header-anchor">#</a> 对象</h3> <ul><li>类是一种模板模型</li> <li>对象是这个类的具体实现</li></ul> <p>!!!tip
+狗和旺财，哪一个是类？哪一个是对象？</p> <div class="language- extra-class"><pre class="language-text"><code>狗是一种类型，属于模板
+
+旺财是狗的实现，属于具体的，具体的就是对象
+</code></pre></div><h3 id="类的使用"><a href="#类的使用" class="header-anchor">#</a> 类的使用</h3> <p>类的使用，其实就是将类具体化，获得对象，然后使用对象的属性和方法</p> <div class="language- extra-class"><pre class="language-text"><code>class Car:
+    def __init__(self):
+        self.speed = 10
+        self.x = 0
+
+    def move(self):
+        self.x += self.speed
+</code></pre></div><p>!!!note
+<code>self.speed</code>是属性，用来记录数据的</p> <div class="language- extra-class"><pre class="language-text"><code>`self.x`是属性，用来记录数据的 
+
+`move`是函数，是一种行为，行为的变化会产生数据的变化
+
+整个对象，其实就是维护状态数据的。
+</code></pre></div><h3 id="面向对象"><a href="#面向对象" class="header-anchor">#</a> 面向对象</h3> <p>提到面向对象，就不得不提到面向过程。
+面向对象和面向过程其实都是一种编程思想, 就是解决问题的思路。</p> <h4 id="面向过程"><a href="#面向过程" class="header-anchor">#</a> 面向过程</h4> <p>面向过程, 全称POP(Process Oriented Programming)。</p> <ul><li>面向过程强调的是过程</li> <li>完成这个过程是，站在单一执行者的角度去完成这个过程</li></ul> <p>例如：中午想吃西红柿炒鸡蛋怎么办呢?
+如果用面向过程的思维，可以分解为一下过程:</p> <div class="language- extra-class"><pre class="language-text"><code>第一步，到超市买西红柿和鸡蛋
+第二步，把西红柿洗干净切好
+第三步，把鸡蛋炒好
+第四步，把西红柿炒好
+第五步，把鸡蛋和西红柿混在一起炒好
+第六步，把炒好西红柿炒蛋端出来
+</code></pre></div><h4 id="面向对象-2"><a href="#面向对象-2" class="header-anchor">#</a> 面向对象</h4> <p>面向对象，全称OOP(Object Oriented Programming)</p> <ul><li>面向对象不再关注具体的过程细节</li> <li>面向对象注重的是关系管理和调度</li></ul> <p>同样是西红柿炒鸡蛋，面向对象会这么做:</p> <div class="language- extra-class"><pre class="language-text"><code>采购员去超市采购
+洗菜员负责洗菜
+切菜员负责切成
+厨师负责烹饪
+上菜员负责上菜
+</code></pre></div><p>每一条都很模糊，但是每一条也明确了要干什么，面向对象就是将这些角色的调度做好。</p> <h4 id="探讨"><a href="#探讨" class="header-anchor">#</a> 探讨</h4> <p>如果以西红柿炒蛋为例，面向过程的做法，类似于一个小老板开了一个小餐厅，前前后后都由自己打点。</p> <p>而面向对象的做法，类似于一个连锁饭店，分工明确，可复制性比较强。</p> <p>其实我们的编程是面向过程和面向对象的叠加。调度管理部分我们采用的是面向对象，细节流程部分采用的是面向过程。</p> <p>例如：西红柿炒鸡蛋</p> <div class="language- extra-class"><pre class="language-text"><code>采购员去超市采购
+    采购员怎么采购？具体化的流程，1，2，3...
+洗菜员负责洗菜
+    洗菜员怎么洗菜？具体化的流程，1，2，3...
+切菜员负责切成
+    切菜员怎么切菜？具体化的流程，1，2，3...
+厨师负责烹饪
+    厨师怎么烹饪？具体化的流程，1，2，3...
+上菜员负责上菜
+    上菜员怎么上菜？具体化的流程，1，2，3...
+</code></pre></div><h2 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h2> <p>继承指的是一个对象直接使用另一个对象的属性或方法</p> <p>继承的格式: class 子类名(父类名): …</p> <h3 id="继承定义"><a href="#继承定义" class="header-anchor">#</a> 继承定义</h3> <div class="language- extra-class"><pre class="language-text"><code># 父类
+class Person:
+
+    def __init__(self):
+        # 构造，初始化属性
+        self.name = 'itcast'
+        self.age = 20
+
+    def say_hello(self):
+        print('hello {}'.format(self.name))
+
+# 子类
+class Student(Person):
+    pass
+
+
+if __name__ == '__main__':
+    stu = Student()
+
+    print(stu.name)
+    print(stu.age)
+
+    stu.say_hello()
+</code></pre></div><p>!!!note
+子类继承父类属性和方法</p> <h3 id="构造函数"><a href="#构造函数" class="header-anchor">#</a> 构造函数</h3> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+# 父类
+class Person:
+
+    def __init__(self, name, age):
+        # 构造，初始化属性
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        print('hello {}'.format(self.name))
+
+
+# 子类
+class Student(Person):
+    pass
+
+if __name__ == '__main__':
+    stu = Student('itheima', 30)
+
+    print(stu.name)
+    print(stu.age)
+
+    stu.say_hello()
+</code></pre></div><p>!!!note
+父类中如果构造改变，子类实例需要传入对应的参数。</p> <h3 id="子类覆写构造"><a href="#子类覆写构造" class="header-anchor">#</a> 子类覆写构造</h3> <div class="language- extra-class"><pre class="language-text"><code>hl_lines
+# 父类
+class Person:
+
+    def __init__(self, name, age):
+        # 构造，初始化属性
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        print('hello {}'.format(self.name))
+
+
+# 子类
+class Student(Person):
+
+    def __init__(self, name, age, id):
+        # 需要去加载父类的构造
+        super(Student, self).__init__(name, age)
+        self.id = id
+
+
+if __name__ == '__main__':
+    stu = Student('itheima', 30, '110')
+
+    print(stu.name)
+    print(stu.age)
+    print(stu.id)
+
+    stu.say_hello()
+</code></pre></div><p>!!! note
+由于业务功能原因，如果子类需要覆写父类的构造，那么：</p> <div class="language- extra-class"><pre class="language-text"><code>* 定义自己的`__init__`构造函数
+* 在自己的`__init__`中加载父类的构造，见18行
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.7f8aab39.js" defer></script><script src="/assets/js/2.994b757b.js" defer></script><script src="/assets/js/9.d2637751.js" defer></script>
+  </body>
+</html>
